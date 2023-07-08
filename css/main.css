@@ -8,16 +8,30 @@ a {
     text-decoration: none;
 }
 
-h1 .title {
-    font-size: larger;
+h1.title {
+    font-size:x-large;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    line-height: 1;
 }
 
-.project {
-    border: 1px black solid;
+p.subtitle {
+    font-size: medium;
+    margin-top: 10pt;
+    color: darkgray;
+}
+
+hr {
+    border: 1px lightgray solid;
+    margin: 20px 0;
+}
+
+article.project {
+    border: 1px lightgray solid;
     padding: 10px;
 }
 
-.project h1 {
+article.project h1 {
     font-size: large;
 }
 
@@ -25,6 +39,6 @@ h1 .title {
     font-size:medium;
 }
 
-a .github_project {
+a.github_project {
     color: gray;
 }
