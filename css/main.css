@@ -1,0 +1,11 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 .title {
+    font-size: large;
+}
+
+.project h1 {
+    font-size: medium;
+}
