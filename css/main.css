@@ -1,11 +1,29 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 60%;
+}
+
+a {
+    text-decoration: none;
 }
 
 h1 .title {
-    font-size: large;
+    font-size: larger;
+}
+
+.project {
+    border: 1px black solid;
+    padding: 10px;
 }
 
 .project h1 {
-    font-size: medium;
+    font-size: large;
+}
+
+.project h2 {
+    font-size:medium;
+}
+
+a .github_project {
+    color: gray;
 }
