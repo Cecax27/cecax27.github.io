@@ -1,44 +1,123 @@
+/* Reset default margin and padding for the whole document */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+img {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding-left: 30%;
-    padding-right: 30%;
 }
 
-a {
-    text-decoration: none;
+/* Style for the header */
+header {
+    width: 20%;
+    height: 100vh;
+    background: linear-gradient(to bottom, #4d4d4d, #2e2e2e);
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    color: #f9f9f9;
 }
 
-h1.title {
-    font-size:x-large;
-    margin-bottom: 0;
-    padding-bottom: 0;
-    line-height: 1;
+.profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 35%;
 }
 
-p.subtitle {
-    font-size: medium;
-    margin-top: 10pt;
-    color: darkgray;
+.profile h2 {
+    font-size: 16pt;
+    font-weight: 600;
 }
 
-hr {
-    border: 1px lightgray solid;
-    margin: 20px 0;
+.profile img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 20px;
 }
 
-article.project {
-    border: 1px lightgray solid;
-    padding: 10px;
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
 }
 
-article.project h1 {
-    font-size: large;
+.menu-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
 }
 
-.project h2 {
-    font-size:medium;
+.menu-item img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
 }
 
-a.github_project {
-    color: gray;
+.menu-item span {
+    color: #808080;
+}
+
+/* Selected menu item style */
+.menu-item.selected {
+    color: #f9f9f9;
+}
+
+/* Style for the main content */
+main {
+    width: 80%;
+    height: 100vh;
+    background: linear-gradient(to bottom, #4d4d4d, #2e2e2e);
+    opacity: 0.95;
+    float: right;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 600px) {
+
+    /* Display the main content first, then the header below */
+    header,
+    main {
+        width: 100%;
+        float: none;
+    }
+}
+
+
+.page-title,
+.section-title,
+.content {
+    padding: 20px;
+}
+
+.page-title h1{
+    color: #808080;
+    font-size: 11pt;
+    font-weight: 700;
+}
+
+.section-title h2 {
+    color: #f9f9f9;
+    font-size: 16pt;
+    font-weight: 600;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
