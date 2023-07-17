@@ -1,47 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
-    <title>Carlos Cervantes</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Carlos Cervantes</title>
+  <script>
+    function copyToClipboard() {
+      /* Get the text to copy */
+      var textToCopy = "carlos27.10.98@gmail.com"
+
+      /* Create a temporary textarea element */
+      var tempTextArea = document.createElement("textarea");
+      tempTextArea.value = textToCopy;
+
+      /* Append the textarea to the body */
+      document.body.appendChild(tempTextArea);
+
+      /* Select the text inside the textarea */
+      tempTextArea.select();
+      tempTextArea.setSelectionRange(0, 99999); /* For mobile devices */
+
+      /* Copy the text to the clipboard */
+      document.execCommand("copy");
+
+      /* Remove the temporary textarea */
+      document.body.removeChild(tempTextArea);
+
+      /* Change the image source */
+      var copyButton = document.getElementById("copyButton");
+      copyButton.src = "rsc/copied.png";
+    }
+  </script>
 </head>
+
 <body>
-    <header>
-        <div class="profile">
-            <img src="rsc/profile-picture.jpg" alt="Profile Picture">
-            <h2>Carlos Cervantes</h2>
-          </div>
-          <div class="menu">
-            <div class="menu-item">
-              <a href="index.html">
-              <img src="rsc/about-icon.png" alt="About Icon">
-              <span>ABOUT ME</span></a>
-            </div>
-            <div class="menu-item">
-              <a href="projects.html">
-              <img src="rsc/projects-icon.png" alt="Projects Icon">
-              <span>PROJECTS</span>
-            </a>
-            </div>
-            <div class="menu-item">
-              <a href="contact.html">
-              <img src="rsc/contact-icon.png" alt="Contact Icon">
-              <span>CONTACT ME</span></a>
-            </div>
-          </div>
-    </header>
-    <main>
-        <div class="page-title">
-            <h1>ABOUT ME</h1>
-          </div>
-          <div class="section-title">
-            <h2>Hello!</h2>
-          </div>
-          <div class="content">
-            <!-- Content of the page goes here -->
-          </div>
-        <!-- <article class="presentation">
+  <header>
+    <div class="profile">
+      <img src="rsc/profile-picture.jpg" alt="Profile Picture">
+      <h2>Carlos Cervantes</h2>
+    </div>
+    <div class="menu">
+      <div class="menu-item">
+        <a href="index.html">
+          <img src="rsc/about-icon.png" alt="About Icon">
+          <span>ABOUT ME</span></a>
+      </div>
+      <div class="menu-item">
+        <a href="projects.html">
+          <img src="rsc/projects-icon.png" alt="Projects Icon">
+          <span>PROJECTS</span>
+        </a>
+      </div>
+      <div class="menu-item">
+        <a href="contact.html">
+          <img src="rsc/contact-icon.png" alt="Contact Icon">
+          <span class="selected">CONTACT ME</span></a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="page-title">
+      <h1>CONTACT ME</h1>
+    </div>
+    <div class="section-title">
+      <h2>Send me a message.</h2>
+    </div>
+    <div class="content">
+      <div class="presentation"><img src="rsc/email.png" alt="" style="height: 10pt;"><p style="color: #7e7e7e; display: inline; margin: 0 10px;">Email</p>
+        <a href="mailto:carlos27.10.98@gmail.com" target="_blank" style="display: inline;">
+          carlos27.10.98@gmail.com
+        </a>
+        <button onclick="copyToClipboard()" class="copy-button" style="display: inline; margin-left: 10px;">
+          <img id="copyButton" src="rsc/copy.png" alt="Copy to Clipboard" style="display: inline;">
+        </button>
+
+      </div>
+    </div>
+    <!-- <article class="presentation">
             <p>Hi, I'm Carlos Cervantes.</p>
             <p>I'm mechatronic engineer, passionate by Data Science.</p>
             <p>I live in Mexico, and I want to apply my knowledge to help organizations to take better desitions. I'll glad working with you.</p>
@@ -54,6 +91,7 @@
             In the game, players take on the role of a character who inherits a rundown farm in the countryside and must transform it into a thriving agricultural enterprise. </p>
             <p>The purpose of this analysis is to find the most profitable crop in Stardew Valley in the end game.</p>
         </article> -->
-    </main>
+  </main>
 </body>
+
 </html>
